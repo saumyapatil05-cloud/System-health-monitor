@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Date=$(date '+%Y-%m-%d' %H:%M:%S')
+Date=$(date '+%Y-%m-%d %H:%M:%S')
 disk=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
 echo "===System Health Monitor==="
 echo "Date: $Date"
@@ -10,7 +10,7 @@ then
 echo"WARNING:disk usage is $disk%"
 fi
 echo "Memory usage:"
-free -f
+free -h
 echo "CPU load:"
 uptime 
 echo "==========================="
