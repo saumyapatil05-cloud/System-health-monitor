@@ -14,3 +14,5 @@ A Bash script that monitors servers system health on AWS EC2.
 
 ## How to run
 ./health.sh
+python3 monitor.py
+docker build -t health-monitor
