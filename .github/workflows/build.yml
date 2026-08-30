@@ -1,4 +1,4 @@
-name : Build Docker Image
+name: Build Docker Image
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
 
 jobs:
   build:
-     runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@v4
-       - name: Build image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
         run: docker build -t health-monitor .
